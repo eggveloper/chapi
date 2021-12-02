@@ -1,0 +1,6 @@
+root = true
+
+[*.{cpp,hpp}]
+trim_trailing_whitespace = true
+tab_width = 4
+indent_style = space

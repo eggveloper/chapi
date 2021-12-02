@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/lib/glfw/include",
+                "${workspaceFolder}/**"
+            ]
+        }
+    ],
+    "version": 4
+}

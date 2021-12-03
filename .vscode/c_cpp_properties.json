@@ -3,7 +3,6 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/lib/glfw/include",
                 "${workspaceFolder}/**"
             ]
         }

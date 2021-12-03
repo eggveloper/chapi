@@ -2,6 +2,8 @@
 
 namespace chapi {
     namespace graphics {
+        void windowResize(GLFWwindow* window, int width, int height);
+
         Window::Window(const char* title, int width, int height) {
             m_Title = title;
             m_Width = width;
@@ -32,6 +34,7 @@ namespace chapi {
             }
 
             glfwMakeContextCurrent(m_Window);
+            glfwSetWindowSizeCallback(m_Window, windowResize);
 
             return true;
         }
@@ -40,13 +43,17 @@ namespace chapi {
             return glfwWindowShouldClose(m_Window) == 1;
         }
 
-        void Window::update() const {
+        void Window::update() {
             glfwSwapBuffers(m_Window);
             glfwPollEvents();
         }
 
         void Window::clear() const {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        }
+
+        void windowResize(GLFWwindow* window, int width, int height) {
+            glViewport(0, 0, width, height);
         }
     }
 }

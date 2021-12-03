@@ -1,6 +1,6 @@
 COMPILER := g++
 
-LDFLAGS := -I. -L. -lglfw -lGL -lm -lX11 -lpthread -lXi -lXrandr -ldl -g
+LDFLAGS := -I. -L. -lglfw -lGLEW -lGLU -lGL -lm -lX11 -lpthread -lXi -lXrandr -ldl -g
 CFLAGS := -I. -L. -g -c
 
 SRC := ${wildcard src/*.cpp}
